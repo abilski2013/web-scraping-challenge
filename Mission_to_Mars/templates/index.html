@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Scrape</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Scrape a Planet</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars!</a></p>
+      <p>give it a minute or two- i'm going to mars for pete's sake</p>
+    </div>
+
+    <!-- Craigslist Listings -->
+    <div class="row" id="mars-scrape">
+      <div class="col-md-12">
+        <h2>Latest Mars News</h2>
+        <h2 class="heading">{{ final_dictionary.latest_article_title }}</h2>
+        <h4 class="heading">{{ final_dictionary.latest_article_text }}</h4>
+      </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Featured Mars Image</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <img src={{final_dictionary.featured_img_url}} class="img-responsive" width="100%">
+      </div>
+      <div class="col-md-4">
+        <h1>Weather on Mars</h1>
+        <small>{{final_dictionary.mars_weather}}</small>
+        <br>
+        <br>
+        <h1>Mars Stats</h1>
+        <table border="1" class="dataframe"> <thead> <tr style="text-align: right;"> <th></th> <th>Category</th> <th>Attribute</th> </tr> </thead> <tbody> <tr> <th></th> <td>Equatorial Diameter:</td> <td>6,792 km</td> </tr> <tr> <th></th> <td>Polar Diameter:</td> <td>6,752 km</td> </tr> <tr> <th></th> <td>Mass:</td> <td>6.39 × 10^23 kg (0.11 Earths)</td> </tr> <tr> <th></th> <td>Moons:</td> <td>2 (Phobos &amp; Deimos)</td> </tr> <tr> <th></th> <td>Orbit Distance:</td> <td>227,943,824 km (1.38 AU)</td> </tr> <tr> <th></th> <td>Orbit Period:</td> <td>687 days (1.9 years)</td> </tr> <tr> <th></th> <td>Surface Temperature:</td> <td>-87 to -5 °C</td> </tr> <tr> <th></th> <td>First Record:</td> <td>2nd millennium BC</td> </tr> <tr> <th></th> <td>Recorded By:</td> <td>Egyptian astronomers</td> </tr> </tbody></table>
+      </div>
+    </div>  
+    </div>  
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1>MARS HEMISPHERES</h1>
+      </div>
+    </div>
+    <div class="row">  
+    <div class="col-md-6">
+    <div class="card" style="width: 38rem; margin-left: auto; margin-right: auto;">
+        <img class="card-img-top" src={{final_dictionary.hemisphere_image_dict[0]["img_url"]}} alt="Card image cap" class="img-responsive" width="100%">
+        <div class="card-body">
+          <h2 class="card-title" style="text-align: center;">{{final_dictionary.hemisphere_image_dict[0]["title"]}}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card" style="width: 38rem; margin-left: auto; margin-right: auto;">
+          <img class="card-img-top" src={{final_dictionary.hemisphere_image_dict[1]["img_url"]}} alt="Card image cap" class="img-responsive" width="100%">
+          <div class="card-body">
+            <h2 class="card-title" style="text-align: center;">{{final_dictionary.hemisphere_image_dict[1]["title"]}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>  
+    <div class="row">  
+      <div class="col-md-6">
+      <div class="card" style="width: 38rem; margin-left: auto; margin-right: auto;">
+          <img class="card-img-top" src={{final_dictionary.hemisphere_image_dict[2]["img_url"]}} alt="Card image cap" class="img-responsive" width="100%">
+          <div class="card-body">
+            <h2 class="card-title" style="text-align: center;">{{final_dictionary.hemisphere_image_dict[2]["title"]}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card" style="width: 38rem; margin-left: auto; margin-right: auto;">
+            <img class="card-img-top" src={{final_dictionary.hemisphere_image_dict[3]["img_url"]}} alt="Card image cap" class="img-responsive" width="100%">
+            <div class="card-body">
+              <h2 class="card-title" style="text-align: center;">{{final_dictionary.hemisphere_image_dict[3]["title"]}}</h2>
+            </div>
+          </div>
+        </div>
+      </div> 
+  </div>
+</body>
+
+</html>
+
